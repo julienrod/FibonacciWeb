@@ -1,0 +1,47 @@
+swagger: '2.0'
+info:
+  version: '0.1.0'
+  title: Open Affect API
+  description: API to do fibonacci
+  termsOfService: none
+  contact:
+    name: Open Affect API team
+    email: info@openaffect.io
+    url: http://openaffect.io
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+host: 127.0.0.1
+basePath: /api
+schemes:
+- "http"
+paths:
+  /fibonacci:
+    post:
+      description: allow user to ask for a fibonacci with a defined max value
+      operationId: askValMax
+      produces:
+        - application/json
+      parameters:
+      - in: body
+        name: maxVal
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Fibonacci
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/fibonacci'
+definitions:
+  fibonacci:
+    type: object
+    required:
+      - result
+    properties:
+      result:
+        type: array
+        items:
+          type: string
