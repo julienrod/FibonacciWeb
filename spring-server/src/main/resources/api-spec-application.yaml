@@ -32,16 +32,6 @@ paths:
         '200':
           description: Fibonacci
           schema:
-            type: object
+            type: array
             items:
-              $ref: '#/definitions/fibonacci'
-definitions:
-  fibonacci:
-    type: object
-    required:
-      - result
-    properties:
-      result:
-        type: array
-        items:
-          type: string
+              type: string

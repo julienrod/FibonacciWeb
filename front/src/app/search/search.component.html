@@ -1,0 +1,11 @@
+<div id="search-component">
+	<h4><label for="search-box">Max Value</label></h4>
+	
+	<input #maxValue id="search-box" (input)="search(maxValue.value)" />
+	
+	<ul class="search-result" *ngIf="fibonacci$">
+		<li *ngFor="let value of fibonacci$ | async">
+			{{value}}
+		</li>
+	</ul>
+</div>
