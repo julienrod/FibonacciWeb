@@ -1,0 +1,38 @@
+div{
+	margin: auto;
+	display: inline;
+	position: relative;
+}
+
+input{
+	text-align: center;
+	display: block;
+	width: 99%;
+    margin : auto;
+}
+
+
+h4{
+	background-color: orange;
+	text-align: center;
+	color: gray;
+	margin: auto;
+}
+
+.search-result li{
+	text-align: center;
+	cursor: pointer;
+	list-style-type: none;
+	background-color: yellow;
+	color: gray;
+}
+
+.search-result li:hover{
+	background-color: orange;
+	color: white;
+}
+
+ul.search-result {
+	margin-top: 0;
+	padding-left: 0;
+}

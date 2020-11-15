@@ -37,8 +37,7 @@ public class FibonacciApiController implements FibonacciApi {
         System.out.println("Asked for " + maxVal);
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
-            Fibonacci fib = new Fibonacci(maxVal);
-            return ResponseEntity.status(HttpStatus.OK).body(fib.getResult());
+            return ResponseEntity.status(HttpStatus.OK).body(new Fibonacci(maxVal).getResult());
         }
 
         return new ResponseEntity<Object>(HttpStatus.NOT_IMPLEMENTED);
